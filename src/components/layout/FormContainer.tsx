@@ -28,7 +28,7 @@ const FormContainer: React.FC<FormContainerProps> = ({ className }) => {
   };
 
   return (
-    <Card className={cn("w-[300px] max-w-full bg-card shadow-lg rounded-lg", className)}>
+    <Card className={cn("w-96 max-w-sm bg-card shadow-lg rounded-lg", className)}>
       <CardHeader>
         <FormHeading />
       </CardHeader>
