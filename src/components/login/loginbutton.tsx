@@ -9,7 +9,7 @@ const LoginButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ 
       className={cn("w-full", className)}
       {...props}
     >
-      Login
+      Sign Up
     </Button>
   );
 };
