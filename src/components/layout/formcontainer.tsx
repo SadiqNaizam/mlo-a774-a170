@@ -3,12 +3,13 @@ import { cn } from '@/lib/utils';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 
 // Import child components using relative paths
-import FormHeading from '../Login/FormHeading';
-import InputField from '../Login/InputField';
-import PasswordField from '../Login/PasswordField';
-import LinkActions from '../Login/LinkActions';
-import LoginButton from '../Login/LoginButton';
-import SignupLink from '../Login/SignupLink';
+import FormHeading from '../login/FormHeading';
+import FullNameField from '../login/FullNameField';
+import InputField from '../login/InputField';
+import PasswordField from '../login/PasswordField';
+import ConfirmPasswordField from '../login/ConfirmPasswordField';
+import LoginButton from '../login/LoginButton';
+import SignupLink from '../login/SignupLink';
 
 interface FormContainerProps {
   className?: string;
@@ -16,7 +17,7 @@ interface FormContainerProps {
 
 /**
  * FormContainer: A central card component that organizes and displays
- * all login form elements in a vertically stacked layout.
+ * all signup form elements in a vertically stacked layout.
  */
 const FormContainer: React.FC<FormContainerProps> = ({ className }) => {
   
@@ -24,7 +25,7 @@ const FormContainer: React.FC<FormContainerProps> = ({ className }) => {
     e.preventDefault();
     // In a real-world application, this is where you would handle form submission,
     // like validating inputs and making an API call.
-    console.log('Login form submitted');
+    console.log('Signup form submitted');
   };
 
   return (
@@ -35,9 +36,10 @@ const FormContainer: React.FC<FormContainerProps> = ({ className }) => {
       <CardContent>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col gap-4">
+            <FullNameField />
             <InputField />
             <PasswordField />
-            <LinkActions />
+            <ConfirmPasswordField />
           </div>
           <LoginButton className="mt-6" />
         </form>
